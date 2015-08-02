@@ -1,0 +1,9 @@
+{
+	"env": {
+        "PORT": "$PORT"
+    },
+	"boot": {
+        "config": "pinf-to-heroku/0",
+        "package": "./package.json"
+    }
+}

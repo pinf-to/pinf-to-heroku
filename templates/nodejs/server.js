@@ -1,10 +1,13 @@
 
+
+process.env.PINF_PROGRAM_PATH = __dirname + "/../../program.heroku.json";
+process.env.VERBOSE = "1";
+process.env.DEBUG = "1";
+
+
 const HTTP = require('http');
 
 const PORT = (process.env.PORT || 5000);
-
-process.env.VERBOSE = "1";
-process.env.DEBUG = "1";
 
 require('org.pinf.genesis.lib').forModule(require, module, function (API, exports) {
 
