@@ -7,5 +7,17 @@
   "dependencies": {
     "bash.origin": "0.1.x",
     "org.pinf.genesis.lib": "0.1.x"
+  },
+  "config": {
+    "pinf-to-heroku/0": {
+      "port": "{{env.PORT}}"
+    },
+    "org.pinf.genesis.lib/0": {
+      "api": {
+        "consumes": {
+          "config": "org.pinf.genesis.lib/0/config"
+        }
+      }
+    }
   }
 }

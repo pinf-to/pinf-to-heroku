@@ -1,14 +1,23 @@
 
-var http = require('http');
+const HTTP = require('http');
 
 const PORT = (process.env.PORT || 5000);
 
-http.createServer(function (req, res) {
 
-  res.writeHead(200, {'Content-Type': 'text/plain'});
+require('org.pinf.genesis.lib').forModule(require, module, function (API, exports) {
 
-  res.end('Hello World from pinf sample app\n');
+	console.log("API", API.config);
 
-}).listen(PORT);
+	HTTP.createServer(function (req, res) {
 
-console.log('Server running at http://127.0.0.1:1337/');
+	  res.writeHead(200, {
+	  	'Content-Type': 'text/plain'
+	  });
+
+	  res.end('Hello World from pinf sample app\n');
+
+	}).listen(PORT);
+
+	console.log('Server running at http://127.0.0.1:' + PORT + '/');
+
+});
