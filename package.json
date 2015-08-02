@@ -1,0 +1,11 @@
+{
+  "name": "pinf-to-heroku",
+  "main": "./templates/nodejs/server.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "bash.origin": "0.1.x",
+    "org.pinf.genesis.lib": "0.1.x"
+  }
+}
