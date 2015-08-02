@@ -7,8 +7,6 @@ process.env.DEBUG = "1";
 
 const HTTP = require('http');
 
-const PORT = (process.env.PORT || 5000);
-
 require('org.pinf.genesis.lib').forModule(require, module, function (API, exports) {
 
 	console.log("API.config", API.config);
@@ -21,8 +19,8 @@ require('org.pinf.genesis.lib').forModule(require, module, function (API, export
 
 	  res.end('Hello World from pinf sample app\n');
 
-	}).listen(PORT);
+	}).listen(parseInt(API.config.port));
 
-	console.log('Server running at http://127.0.0.1:' + PORT + '/');
+	console.log('Server running at http://127.0.0.1:' + API.config.port + '/');
 
 });
