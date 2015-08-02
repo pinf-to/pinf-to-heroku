@@ -3,10 +3,12 @@ const HTTP = require('http');
 
 const PORT = (process.env.PORT || 5000);
 
+process.env.VERBOSE = "1";
+process.env.DEBUG = "1";
 
 require('org.pinf.genesis.lib').forModule(require, module, function (API, exports) {
 
-	console.log("API", API.config);
+	console.log("API.config", API.config);
 
 	HTTP.createServer(function (req, res) {
 
